@@ -40,7 +40,7 @@ def _load_json(package_path: str, file_name: str, root: str):
     """Loads a JSON resource from a package into a python entity.
 
     Parameters
-    ----------
+    --------
         package_path : str
             The fully qualified package that contains the resource.
 
@@ -51,7 +51,7 @@ def _load_json(package_path: str, file_name: str, root: str):
             The root node of the JSON document.
 
     Returns
-    -------
+    --------
         A python entity starting at 'root'.
     """
     # add 'Scribe-Data/src' to PYTHONPATH so that resources.files()
@@ -92,7 +92,7 @@ def _find(source_key: str, source_value: str, target_key: str, error_msg: str):
     Given a key/value pair, the 'source' and the 'target' key get the 'target' value.
 
     Parameters
-    ----------
+    --------
         source_value : str
             The source value to find equivalents for (e.g. 'english').
 
@@ -106,11 +106,11 @@ def _find(source_key: str, source_value: str, target_key: str, error_msg: str):
             The message displayed when a value cannot be found.
 
     Raises
-    ------
+    --------
         ValueError : when a source_value is not supported.
 
     Returns
-    -------
+    --------
         The 'target' value given the passed arguments.
     """
     norm_source_value = source_value.lower()
@@ -138,12 +138,12 @@ def get_language_qid(language: str) -> str:
     Returns the QID of the given language.
 
     Parameters
-    ----------
+    --------
         language : str
             The language the QID should be returned for.
 
     Returns
-    -------
+    --------
         str
             The Wikidata QID for the language.
     """
@@ -160,12 +160,12 @@ def get_language_iso(language: str) -> str:
     Returns the ISO code of the given language.
 
     Parameters
-    ----------
+    --------
         language : str
             The language the ISO should be returned for.
 
     Returns
-    -------
+    --------
         str
             The ISO code for the language.
     """
@@ -183,12 +183,12 @@ def get_language_from_iso(iso: str) -> str:
     Returns the language name for the given ISO.
 
     Parameters
-    ----------
+    --------
         iso : str
             The ISO the language name should be returned for.
 
     Returns
-    -------
+    --------
         str
             The name for the language which has an ISO value of iso.
     """
@@ -204,12 +204,12 @@ def get_language_words_to_remove(language: str) -> list[str]:
     Returns the words that should be removed during the data cleaning process for the given language.
 
     Parameters
-    ----------
+    --------
         language : str
             The language the words should be returned for.
 
     Returns
-    -------
+    --------
         list[str]
             The words that that be removed during the data cleaning process for the given language.
     """
@@ -226,12 +226,12 @@ def get_language_words_to_ignore(language: str) -> list[str]:
     Returns the words that should not be included as autosuggestions for the given language.
 
     Parameters
-    ----------
+    --------
         language : str
             The language the words should be returned for.
 
     Returns
-    -------
+    --------
         list[str]
             The words that should not be included as autosuggestions for the given language.
     """
@@ -269,12 +269,12 @@ def get_ios_data_path(language: str) -> str:
     Returns the path to the data json of the iOS app given a language.
 
     Parameters
-    ----------
+    --------
         language : str
             The language the path should be returned for.
 
     Returns
-    -------
+    --------
         str
             The path to the data json for the given language.
     """
@@ -286,12 +286,12 @@ def get_android_data_path(language: str) -> str:
     Returns the path to the data json of the Android app given a language.
 
     Parameters
-    ----------
+    --------
         language : str
             The language the path should be returned for.
 
     Returns
-    -------
+    --------
         str
             The path to the data json for the given language.
     """
@@ -303,12 +303,12 @@ def get_desktop_data_path(language: str) -> str:
     Returns the path to the data json of the desktop app given a language.
 
     Parameters
-    ----------
+    --------
         language : str
             The language the path should be returned for.
 
     Returns
-    -------
+    --------
         str
             The path to the data JSON for the given language.
     """
@@ -322,7 +322,7 @@ def check_command_line_args(
     Checks command line arguments passed to Scribe-Data files.
 
     Parameters
-    ----------
+    --------
         file_name : str
             The name of the file for clear error outputs if necessary.
 
@@ -333,7 +333,7 @@ def check_command_line_args(
             The values that should be checked against.
 
     Returns
-    -------
+    --------
         args: list(str)
             The arguments or an error are returned depending on if they're correct.
     """
@@ -375,7 +375,7 @@ def check_and_return_command_line_args(
     Checks command line arguments passed to Scribe-Data files and returns them if correct.
 
     Parameters
-    ----------
+    --------
         all_args : list (str)
             The arguments passed to the Scribe-Data file.
 
@@ -386,7 +386,7 @@ def check_and_return_command_line_args(
             The values that the second argument should be checked against.
 
     Returns
-    -------
+    --------
         first_args, second_args: list(str)
             The subset of possible first and second arguments that have been verified as being valid.
     """
