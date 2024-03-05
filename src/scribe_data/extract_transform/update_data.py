@@ -31,13 +31,28 @@ PATH_TO_SCRIBE_ORG = os.path.dirname(sys.path[0]).split("Scribe-Data")[0]
 PATH_TO_SCRIBE_DATA_SRC = f"{PATH_TO_SCRIBE_ORG}Scribe-Data/src"
 sys.path.insert(0, PATH_TO_SCRIBE_DATA_SRC)
 
+<<<<<<< Updated upstream
 from scribe_data.utils import (
+=======
+from utils import (  # noqa: E402
+>>>>>>> Stashed changes
     check_and_return_command_line_args,
     get_ios_data_path,
     get_path_from_et_dir,
 )
 
+<<<<<<< Updated upstream
 PATH_TO_ET_FILES = "./"
+=======
+
+from scribe_data.utils import PYTHONPATH
+
+
+
+SCRIBE_DATA_SRC_PATH = "src/scribe_data"
+PATH_TO_ET_LANGUAGE_FILES = f"{SCRIBE_DATA_SRC_PATH}/extract_transform/languages"
+PATH_TO_UPDATE_FILES = f"{SCRIBE_DATA_SRC_PATH}/load/_update_files"
+>>>>>>> Stashed changes
 
 # Set SPARQLWrapper query conditions.
 sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
@@ -281,9 +296,15 @@ with open("../load/_update_files/data_table.txt", encoding="utf-8") as f:
 
 for l in new_table_values.splitlines():
     # Replace headers while translation is still in beta and always for prepositions to annotate missing values.
+<<<<<<< Updated upstream
     l = l.replace("Translations", "Translations\*")
     l = l.replace("Prepositions", "Prepositions†")
     new_table_value_strings.append(l)
+=======
+    line = line.replace("Translations", "Translations")
+    line = line.replace("Prepositions", "Prepositions†")
+    new_table_value_strings.append(line)
+>>>>>>> Stashed changes
 
 with open("../load/_update_files/data_table.txt", "w+", encoding="utf-8") as f:
     for i in range(len(new_table_value_strings)):

@@ -33,6 +33,7 @@ from typing import Any
 import langcodes
 from langcodes import Language
 
+
 PROJECT_ROOT = "Scribe-Data"
 
 
@@ -54,8 +55,13 @@ def _load_json(package_path: str, file_name: str, root: str):
     -------
         A python entity starting at 'root'.
     """
+<<<<<<< Updated upstream
     # add 'Scribe-Data/src' to PYTHONPATH so that resources.files()
     # can find 'package_path'
+=======
+    # Add 'Scribe-Data/src' to PYTHONPATH so that resources.files() can find 'package_path'.
+    PYTHONPATH="${PYTHONPATH}:{path_to_Scribe-Data/src}"
+>>>>>>> Stashed changes
     parts = Path(__file__).resolve().parts
     prj_root_idx = parts.index(PROJECT_ROOT)
     package_root = str(Path(*parts[: prj_root_idx + 1], "src"))
